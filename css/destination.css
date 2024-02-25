@@ -1,0 +1,332 @@
+body{
+    background: linear-gradient(to bottom right,#00cc00,#3399ff);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+.heading{
+    position: relative;
+    text-align: center;
+    top: 50px;
+    color: white;
+    font-size: 70px;
+}
+
+.main{
+    overflow: hidden;
+    position: fixed;
+    /* background-color: rgba(135, 206, 250, 0.4); */
+    top: 0;
+    width: 100vw;
+    height: 32vh;
+    max-width: 1550px;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+ul li{
+    display: inline;
+}
+
+.list{
+    position: fixed;
+    display: block;
+    top: 9px;
+    float: left;
+}
+
+.list .logo img{
+    position: relative;
+    float: left;
+    top: -20px;
+    margin-left:-5%;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+.search{
+    display: inline;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    left: 10px;
+    top: 40px;
+    position: absolute;
+}
+
+.search input[type=text]{
+    position: relative;
+    float: left;
+    top: -61px;
+    left: 5%;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 1px solid blue;
+    transition: 0.6 ease;
+}
+
+.search input[type=text]:hover{
+    background-color: #dcdcdc;
+}
+
+
+.list input[type=image]{
+    position: relative;
+    float: right;
+    top: -94px;
+    left: 14%;
+    margin-left: 20%;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    transition: 0.6s ease;
+    background-color: #fff;
+}
+
+.list input[type=image] :hover{
+    background-color: #739ac5;
+}
+
+.list2{
+    position: relative;
+    top: -20px;
+    float: right;
+}
+
+.list2 li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.9s ease;
+}
+
+.list2 li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+/* Css for logout button */
+
+.list2 li .logout-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-left: -14px;
+    cursor: pointer;
+    display: flex;
+  }
+  
+  .list2 li .logout-button:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+  }
+  
+  .list2 li .logout-button:hover {
+    color: #000;
+  }
+
+.list2 li .active-menu a{
+    background-color: #fff;
+    color: #000;
+}
+
+/* css for drop down menu*/
+.list2 .dropdown {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    float: right;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  
+  .list2 .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .list2 .dropdown-content a {
+    color: black;
+    padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .list2 .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.container{
+    overflow: auto;
+    width: 1450px;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container .box{
+    overflow: hidden;
+    width: 320px;
+    height: 270px;
+    margin: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    transition: transform 2s;
+}
+
+.container .box .imgBox{
+    overflow: hidden;
+}
+.container .box .imgBox img{
+    max-width: 100%;
+    height: 300px;
+    transition: transform 2s;
+}
+
+.container .box .name-text{
+    position: absolute;
+    top: 400px;
+    color: white;
+    font-family: Helvetica;
+    transition: 0.6s ease;
+}
+
+.container .box .name-text a{
+    position: relative;
+    display: none;
+    border: 1px solid #fff;
+    padding: 5px 9px;
+    top: -20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+    text-align: center;
+}
+
+.container .box:hover .imgBox img{
+    overflow: hidden;
+    transform: scale(1.2);
+}
+
+.container .box:hover .name-text a{
+    display: block;
+    top: -20px;
+}
+.container .box .name-text a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.container .box:hover .top1{
+    top: 380px;
+}
+.container .box .name-pading1{
+    left: 190px;
+}
+.container .box .name-pading2{
+    left: 520px;
+}
+.container .box .name-pading3{
+    left: 880px;
+}
+.container .box .name-pading4{
+    left: 1240px;
+}
+
+.container .box:hover .top2{
+    top: 680px;
+}
+.container .box .name-pading5{
+    top: 710px;
+    left: 180px;
+
+}
+.container .box .name-pading6{
+    top: 710px;
+    left: 500px;
+}
+.container .box .name-pading7{
+    top: 710px;
+    left: 890px;
+}
+.container .box .name-pading8{
+    top: 710px;
+    left: 1230px;
+}
+.container .box:hover .top3{
+    top: 990px;
+}
+.container .box .name-pading9{
+    top: 1020px;
+    left: 160px;
+
+}
+.container .box .name-pading10{
+    top: 1020px;
+    left: 500px;
+}
+.container .box .name-pading11{
+    top: 1020px;
+    left: 870px;
+}
+.container .box .name-pading12{
+    top: 1020px;
+    left: 1240px;
+}
+/* css for search bar */
+
+@media only screen and (max-width: 700px) {
+
+    .prev,
+    .next {
+      font-size: 11px
+    }
+    .search input[type=text]{
+      width: 213px;
+    }
+    .search input[type=image]{
+        margin: 0px -26px;
+    }
+  
+  }
+@media only screen and (max-width: 500px) {
+
+    .prev,
+    .next {
+      font-size: 11px
+    }
+    .search input[type=text]{
+      display: none;
+    }
+    .search input[type=image]{
+      display: none;
+    }
+  
+  }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

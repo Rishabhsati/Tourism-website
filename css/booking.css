@@ -1,0 +1,240 @@
+body{
+    margin: 0px;
+    padding: 0px;
+	background:url(../images/background/bg1.jpg) no-repeat;
+    height: 100%;
+    background-size: 100% 100%;
+    text-align: center;
+}
+body h1{
+    position: relative;
+    top: 56px;
+    margin-top:7% ;
+}
+
+.container{
+    width: 40%;
+    height: 80%;
+    margin: 7% 27%;
+    padding: 40px;
+}
+
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.textbox input{
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: navajowhite;
+    background-color: rgba(251,204,78,0.5);
+    color: white;
+    font-size: 72%;
+    height: 34px;
+    width: 350px;
+}
+
+.textbox input::placeholder{
+    color: white;
+}
+
+.btn input{
+    margin-top:10px ;
+    width:50%;
+    height: 40px;
+    border-radius: 8px;
+    transition: 0.6s ease;
+}
+.btn input:hover{
+    background-color: #FB4A0A;
+}
+.main{
+    overflow: hidden;
+    position: fixed;
+    /* background-color: rgba(135,206,250,0.4); */
+    top: 0;
+    width: 100vw;
+    height: 32vh;
+    max-width: 1550px;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+ul li{
+    display: inline;
+}
+.list{
+    position: fixed;
+    display: block;
+    top: 9px;
+    float: left;
+}
+
+.list li.logo img{
+    position: relative;
+    float: left;
+    top: -20px;
+    margin-left: -5%;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+  
+}
+
+.search input[type=text ]{
+    position: relative;
+    float: left;
+    top: -18px;
+    left: 5%;;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 1px solid #0000ff;
+    transition: 0.6s ease;
+}
+
+.search input[type=text]:hover{
+    background-color: #dcdcdc;
+}
+.list input[type=image]{
+    position: relative;
+    float: right;
+    top: -50px;
+    left: 2%;
+    margin-left: 20%;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid #00f;
+    transition: 0.6s ease;
+    background-color: #fff;
+}
+
+.list input[type=image]:hover{
+    background-color: #739ac5;
+}
+
+.list2{
+    position: relative;
+    top: -20px;
+    float: right;
+}
+.list2 li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.9s ease;
+}
+
+.list2 li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+/* css for drop down menu*/
+.list2 .dropdown {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    float: right;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  
+  .list2 .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .list2 .dropdown-content a {
+    color: black;
+    padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .list2 .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .list2 li .logout-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-left: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .list2 li .logout-button:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+  }
+  
+  .list2 li .logout-button:hover {
+    color: #000;
+  }
+
+  /* On smaller screens, decrease text size */
+@media only screen and (max-width: 400px) {
+
+    .prev,
+    .next {
+      font-size: 11px
+    }
+    .search input[type=text]{   
+      display: none;
+    }
+    .search input[type=image]{
+      display: none;
+    }
+  
+  }
+@media only screen and (max-width: 750px) {
+
+    .prev,
+    .next {
+      font-size: 11px
+    }
+    .search input[type=text]{   
+        font-size: 8px;
+        width: 140px;
+        top: -9px;
+        left: -49px;
+    }
+    .search input[type=image]{
+        left: -20%;
+        top: -33px;
+        padding: 1px;
+    }
+    .list li.logo img {
+        left: -52px;
+    }    body h1 {
+        
+        margin-top: 14%;
+    }
+  
+  }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="css/booking.css">
+    <script>
+        function validateForm() {
+            if (isEmpty(document.getElementById('data_3').value.trim())) {
+                alert('First name is Required!');
+                return false;
+            }
+            if (isEmpty(document.getElementById('data_4').value.trim())) {
+                alert('Last name is Required!');
+                return false;
+            }
+            if (isEmpty(document.getElementById('data_5').value.trim())) {
+                alert('Email must be valid email address!');
+                return false;
+            }
+        }
+        function isEmpty(str) { return (str.length == 0 || !str.trim()); }
+        function validateEmail(email) {
+            var re = ""
+            return isEmpty(email) || re.test(email);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <ul>
+            <ul class="list">
+                <li class="logo"><a href="index.html"><img src="earth-globe.png" alt="Logo"
+                            style="width: 36px;height: 36px;"></a></li>
+                <div class="search">
+                    <form action="info.php" method="POST">
+                        <input type="text" name="search_p" placeholder="Search.." size="50">
+                        <input type="image" name="submit_p" src="search_icon.png" alt="Search image"
+                            style="width:22px;height: 22px; margin-left:35px ;">
+                    </form>
+                </div>
+            </ul>
+            <ul class="list2">
+                <li class="dropdown" style="margin: -18px;">
+                  <a href="javascript:void(0)"  class="dropbtn">Menu &#9662;</a>
+                  <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <hr>
+                    <a href="destination.php">Destination</a>
+                    <hr>
+                    <a href="gallery.html">Gallery</a>
+                    <hr>
+                    <a href="feedback.html">Feedback</a>
+                    <hr>
+                    <form method="POST" action="logout.php">
+                      <input type="hidden" name="logout" value="1">
+                      <button type="submit" class="logout-button">Logout</button>
+                    </form>
+                    <hr>
+                  </div>
+                </li>
+              </ul>
+        </ul>
+    </div>
+    <h1>Tour Booking</h1>
+    <div class="container">
+        <form action="booking.php" method="POST" name="form" onsubmit="return validateForm()">
+            <div class="textbox">
+                <input class="input" type="text" placeholder="First Name" name="ffirst" value=""
+                    onkeypress="return /[a-zA-Z]/i.test(event.key)" required>
+            </div>
+
+            <div class="textbox">
+                <input class="input" type="text" placeholder="Last Name" name="flast" value=""
+                    onkeypress="return /[a-zA-Z]/i.test(event.key)" required>
+            </div>
+
+            <div class="textbox">
+                <input class="input" type="text" placeholder="Email" name="femail" value="" required
+                    pattern="[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+.[a-z]{2,4}" title="Invalid Email">
+            </div>
+
+            <div class="textbox">
+                <input class="input" type="text" placeholder="City" name="city" value=""
+                    onkeypress="return /[a-zA-Z]/i.test(event.key)" required>
+            </div>
+
+            <div class="textbox">
+                <input class="input" type="text" placeholder="Phone" name="fphone" value=""
+                    onkeypress="return /[0-9]/i.test(event.key)" maxlength="10" pattern="([0-9]){10,}" required>
+            </div>
+
+            <div class="textbox">
+                <input class="input" type="text" placeholder="Destination" name="fdesti" value="" required>
+            </div>
+            <div class="btn">
+                <input name="submit" value="Submit" type="submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+<script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+  var dropdowns = document.getElementsByClassName("dropdown");
+  for (var i = 0; i < dropdowns.length; i++) {
+    dropdowns[i].addEventListener("click", function(event) {
+      event.stopPropagation();
+      var dropdownContent = this.getElementsByClassName("dropdown-content")[0];
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener("click", function(event) {
+    for (var i = 0; i < dropdowns.length; i++) {
+      var dropdownContent = dropdowns[i].getElementsByClassName("dropdown-content")[0];
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      }
+    }
+  });
+});
+</script>
+
+</html>

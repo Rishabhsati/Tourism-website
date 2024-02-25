@@ -1,0 +1,236 @@
+body{
+	background-color: #00cc66; 
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+}
+.main{
+  overflow: hidden;
+  position: fixed;
+  /* background-color: rgba(135,206,250,0.4); */
+  top: 0;
+  width: 100vw;
+  height: 32vh;
+  max-width: 1550px;
+}
+
+ul{
+  list-style-type: none;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+ul li{
+  display: inline;
+}
+
+.list{
+  position: fixed;
+  display: block;
+  top: 9px;
+  float: left;
+}
+
+.list li.logo img{
+  position: relative;
+  float: left;
+  top: -20px;
+  margin-left: -5%;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+
+}
+.search{
+  display: inline;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.search input[type=text]{
+  position: relative;
+  float: left;
+  top:-18px;
+  left: 5%;
+  padding: 6px;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 1px solid #0000ff;
+  transition: 0.6s ease;
+}
+
+.search input[type=text]:hover{
+  background-color: #dcdcdc;
+}
+
+
+.list input[type=image]{
+  position: relative;
+  float: right;
+  top:-50px;
+  left: 2%;
+  margin-left: 20%; 
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid #00f;
+  transition: 0.6s ease;
+  background-color: #fff;
+}
+
+.list input[type=image]:hover{
+  background-color: #739ac5;
+}
+
+.list2{
+  position: relative;
+  top: -20px;
+  float: right;
+}
+
+.list2 li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  transition: 0.9s ease;
+}
+
+.list2 li a:hover{
+  background-color: #fff;
+  color: #000;
+
+}
+/* css for drop down menu*/
+.list2 .dropdown {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  float: right;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.list2 .dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.list2 .dropdown-content a {
+  color: black;
+  padding: 0px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.list2 .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Css for logout button */
+
+.list2 li .logout-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-left: -14px;
+  cursor: pointer;
+  display: flex;
+}
+
+.list2 li .logout-button:before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("logout_icon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+}
+
+.list2 li .logout-button:hover {
+  color: #000;
+}
+.hedder{
+  margin-top: 5%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container{
+  background-color: rgba(120, 244, 68, 0.3);
+	width: 85vw;
+	height: 95vh;
+	margin:-2% 0% 5% 0%;
+  margin-left: 6%;
+}
+.description-container{
+  width: 80vw;
+  height: 50vh;
+  margin: 7% 3%;
+}
+.container .box1{
+	float: left;
+	overflow: hidden;
+	width: 320px;
+	height: 240px;
+	margin: 15px 15px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+.container .description h1{
+	text-align: center;
+}
+.container .description p{
+	margin: 0px 36px;
+	font-size: 16px;
+}
+.container .description{
+	width: 50vw;
+	float: right;
+}
+.container .description-container a{
+	position: relative;
+	text-decoration: none;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	padding: 6px 10px;
+	color: #fff;
+	top: 20px;
+	margin-left: 30%;
+	transition: 0.6s ease;
+}
+.container a:hover{
+	background-color: #fff;
+	color: #000;
+}
+.container .image-container{
+	width: 80vw;
+	height: 40vh;
+	margin: -5% 3%;
+}
+.container .image-container .box{
+	overflow: hidden;
+	width: 338px;
+	height: 224px;
+	margin: 5px 0px;
+	box-sizing: border-box;
+	display: inline-block;
+	transition: transform 2s;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
